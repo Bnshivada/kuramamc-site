@@ -1,99 +1,59 @@
-/* ================= ABOUT SECTION ================= */
+/* ===== ABOUT FIX (SITEYİ BOZMADAN) ===== */
 
 .about-section {
-  padding: 120px 60px;
-  background: radial-gradient(circle at top, #1b3a44, #0f2027);
+  background: none !important;
+  padding: 100px 60px;
 }
 
 .about-card {
-  max-width: 1200px;
-  margin: auto;
-  background: rgba(10, 25, 32, 0.85);
-  border-radius: 30px;
-  padding: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
-  box-shadow: 0 40px 100px rgba(0,0,0,.6);
-  backdrop-filter: blur(10px);
+  align-items: center;
 }
 
 .about-left {
-  flex: 1;
+  text-align: left;
 }
 
 .about-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   color: #facc15;
-  margin-bottom: 15px;
-  font-weight: 600;
 }
 
 .about-left h2 {
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 800;
-  margin-bottom: 10px;
 }
 
 .about-desc {
-  color: #cbd5e1;
-  margin-bottom: 40px;
-}
-
-/* FEATURES */
-
-.feature {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
+  color: rgba(255,255,255,.8);
 }
 
 .feature-icon {
-  font-size: 22px;
   color: #38bdf8;
-  margin-top: 4px;
 }
 
-.feature h4 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.feature p {
-  color: #b6c2cc;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* ================= RIGHT LOGO ================= */
-
+/* LOGO SAĞ ALT – ATLAS GİBİ */
 .about-right {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about-right img {
-  width: 380px;
-  max-width: 100%;
-  filter: drop-shadow(0 0 70px rgba(56,189,248,.6));
-  animation: float 5s ease-in-out infinite;
+  width: 320px;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 50px rgba(56,189,248,.5));
 }
 
-/* ================= RESPONSIVE ================= */
-
+/* MOBİL */
 @media (max-width: 900px) {
   .about-card {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 50px 30px;
-  }
-
-  .about-right img {
-    width: 260px;
   }
 }
