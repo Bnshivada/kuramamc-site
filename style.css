@@ -6,39 +6,24 @@
 }
 
 body {
-  background: #05050a;
-  color: #fff;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
 }
 
 /* HERO */
 .hero {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, #6a00ff 0%, #12001f 40%, #05050a 75%);
-  position: relative;
-  overflow: hidden;
-}
-
-/* STARS */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(1px 1px at 20% 30%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 70% 60%, #fff, transparent),
-    radial-gradient(1px 1px at 40% 80%, #fff, transparent);
-  opacity: 0.35;
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAVBAR */
 .navbar {
-  position: relative;
-  z-index: 2;
-  padding: 22px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px 60px;
 }
 
 .nav-left {
@@ -52,101 +37,114 @@ body {
 }
 
 .logo-text {
-  font-size: 22px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: black;
 }
 
 /* HERO CONTENT */
 .hero-content {
-  position: relative;
-  z-index: 2;
-  height: calc(100vh - 90px);
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 
-/* FLOATING LOGO */
 .main-logo {
-  width: 170px;
-  margin-bottom: 25px;
-  animation: float 3.5s ease-in-out infinite;
+  width: 120px;
+  margin-bottom: 20px;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
-  100% { transform: translateY(0); }
-}
-
-/* TEXT */
 .hero-content h2 {
-  font-size: 54px;
+  font-size: 36px;
   font-weight: 800;
-  background: linear-gradient(90deg, #ffb347, #ffcc33);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .hero-content p {
+  max-width: 600px;
   opacity: 0.85;
-  margin-bottom: 25px;
   line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-/* STATUS */
+/* SERVER STATUS */
 #server-status {
-  color: #9bffb4;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 /* BUTTONS */
 .buttons {
+  margin-top: 25px;
   display: flex;
-  gap: 18px;
+  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .btn-primary {
-  padding: 15px 36px;
+  padding: 14px 30px;
+  border-radius: 30px;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #ff9f1c, #ff7a00);
-  box-shadow: 0 0 25px rgba(255,140,0,0.6);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.25s;
+  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-primary:hover {
-  transform: scale(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 114, 255, 0.6);
 }
 
-.btn-secondary,
-.btn-outline {
-  padding: 15px 36px;
-  border-radius: 10px;
-  border: 2px solid #7a7aff;
-  background: transparent;
+.btn-secondary {
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
   color: white;
   text-decoration: none;
-}
-
-#copied-text {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #cfaaff;
-  opacity: 0;
+  font-weight: 600;
   transition: 0.3s;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-content h2 {
-    font-size: 36px;
-  }
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* TOAST NOTIFICATION */
+.toast {
+  position: fixed;
+  top: 25px;
+  right: -300px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
+  font-weight: 500;
+  z-index: 9999;
+  transition: right 0.4s ease;
+}
+
+.toast.show {
+  right: 25px;
 }
