@@ -1,29 +1,35 @@
 const SERVER_IP = "kuramamc.tkmc.net";
-
-async function loadServerStatus() {
-  try {
-    const res = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}`);
-    const data = await res.json();
-
-    const el = document.getElementById("server-status");
-
-    if (!data.online) {
-      el.innerText = "🔴 Sunucu şu an kapalı";
-      return;
-    }
-
-    el.innerText = `🟢 ${data.players.online} / ${data.players.max} oyuncu aktif`;
-  } catch {
-    document.getElementById("server-status").innerText =
-      "⚠️ Sunucu bilgisi alınamadı";
-  }
-}
+const SERVER_STATUS_URL = `https://api.mcsrvstat.us/2/${SERVER_IP}`;
 
 function copyIP() {
   navigator.clipboard.writeText(SERVER_IP);
-  const t = document.getElementById("copied-text");
-  t.style.opacity = "1";
-  setTimeout(() => t.style.opacity = "0", 2000);
+
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+}
+
+async function loadServerStatus() {
+  const statusText = document.getElementById("server-status");
+
+  try {
+    const res = await fetch(SERVER_STATUS_URL);
+    const data = await res.json();
+
+    if (data.online) {
+      statusText.innerHTML = `🟢 ${data.players.online} / ${data.players.max} oyuncu aktif`;
+      statusText.style.color = "#4cff4c";
+    } else {
+      statusText.innerHTML = "🔴 Sunucu çevrimdışı";
+      statusText.style.color = "#ff4c4c";
+    }
+  } catch (err) {
+    statusText.innerHTML = "⚠️ Sunucu durumu alınamadı";
+    statusText.style.color = "#ffcc00";
+  }
 }
 
 loadServerStatus();
