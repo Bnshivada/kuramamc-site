@@ -23,7 +23,7 @@ async function loadServerStatus() {
       statusText.innerHTML = `🟢 ${data.players.online} / ${data.players.max} oyuncu aktif`;
       statusText.style.color = "#4cff4c";
     } else {
-      statusText.innerHTML = "🔴 Sunucu çevrimdışı";
+      statusText.innerHTML = "🔴 KuramaMC Sunucusu Şuanda Aktif Değil!";
       statusText.style.color = "#ff4c4c";
     }
   } catch (err) {
