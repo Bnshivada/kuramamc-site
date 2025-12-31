@@ -1,12 +1,29 @@
-function copyIP() {
-  const ip = "kuramamc.tkmc.net";
+const SERVER_IP = "kuramamc.tkmc.net";
 
-  navigator.clipboard.writeText(ip);
+async function loadServerStatus() {
+  try {
+    const res = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}`);
+    const data = await res.json();
 
-  const text = document.getElementById("copied-text");
-  text.style.opacity = "1";
+    const el = document.getElementById("server-status");
 
-  setTimeout(() => {
-    text.style.opacity = "0";
-  }, 2000);
+    if (!data.online) {
+      el.innerText = "🔴 Sunucu şu an kapalı";
+      return;
+    }
+
+    el.innerText = `🟢 ${data.players.online} / ${data.players.max} oyuncu aktif`;
+  } catch {
+    document.getElementById("server-status").innerText =
+      "⚠️ Sunucu bilgisi alınamadı";
+  }
 }
+
+function copyIP() {
+  navigator.clipboard.writeText(SERVER_IP);
+  const t = document.getElementById("copied-text");
+  t.style.opacity = "1";
+  setTimeout(() => t.style.opacity = "0", 2000);
+}
+
+loadServerStatus();
