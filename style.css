@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #05050a;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("assets/bg.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(120,0,255,0.35), #05050a 70%);
+}
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button, a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #8a2be2, #5d00ff);
+  box-shadow: 0 0 20px rgba(138,43,226,0.6);
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary,
+.btn-outline {
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: 2px solid #8a2be2;
+  background: transparent;
+}
+
+#copied-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #a66bff;
+  opacity: 0;
+  transition: 0.3s;
+}
