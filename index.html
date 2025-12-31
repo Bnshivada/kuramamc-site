@@ -5,33 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KuramaMC</title>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero">
-    <div class="overlay"></div>
+<header class="hero">
 
-    <nav class="navbar">
-      <h1 class="logo">KuramaMC</h1>
-      <a href="#" class="btn-outline">Discord</a>
-    </nav>
-
-    <div class="hero-content">
-      <h2>KuramaMC</h2>
-      <p>Yeni nesil Minecraft deneyimi</p>
-      <div class="buttons">
-        <button class="btn-primary" onclick="copyIP()">IP Kopyala</button>
-        <a href="#" class="btn-secondary">Oyna</a>
-      </div>
-      <span id="copied-text">IP kopyalandı!</span>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" class="nav-logo">
+      <span class="logo-text">KuramaMC</span>
     </div>
-  </header>
 
-  <script src="script.js"></script>
+    <a href="#" class="btn-outline">Discord</a>
+  </nav>
+
+  <div class="hero-content">
+    <img src="assets/logo.png" class="main-logo">
+
+    <h2>SINIRLARI AŞMAYA HAZIR MISIN?</h2>
+
+    <p>
+      Türkiye'nin en gelişmiş, adil ve eğlenceli Minecraft sunucusu<br>
+      KuramaMC'ye hoş geldin. Kendi hikayeni yazmaya bugün başla.
+    </p>
+
+    <p id="server-status">Sunucu durumu yükleniyor...</p>
+
+    <div class="buttons">
+      <button class="btn-primary" onclick="copyIP()">IP KOPYALA</button>
+      <a href="#" class="btn-secondary">TOPLULUĞA KATIL</a>
+    </div>
+
+    <span id="copied-text">IP kopyalandı!</span>
+  </div>
+
+</header>
+
+<script src="script.js"></script>
 </body>
 </html>
