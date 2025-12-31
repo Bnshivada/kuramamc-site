@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,94 +7,142 @@
 }
 
 body {
+  min-height: 100vh;
   background: #05050a;
-  color: #fff;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
+/* HERO */
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url("assets/bg.jpg") center/cover no-repeat;
-  overflow: hidden;
+  background:
+    radial-gradient(circle at top, #6a00ff 0%, #12001f 40%, #05050a 75%);
+  display: flex;
+  flex-direction: column;
 }
 
-.overlay {
+/* STARS (PURE CSS) */
+.hero::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(120,0,255,0.35), #05050a 70%);
+  background:
+    radial-gradient(1.5px 1.5px at 15% 20%, #fff, transparent),
+    radial-gradient(1px 1px at 60% 30%, #fff, transparent),
+    radial-gradient(2px 2px at 80% 70%, #fff, transparent),
+    radial-gradient(1px 1px at 30% 80%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 50% 50%, #fff, transparent);
+  opacity: 0.4;
+  pointer-events: none;
 }
 
+/* NAVBAR */
 .navbar {
-  position: relative;
   z-index: 2;
-  padding: 20px 60px;
+  padding: 25px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
+/* HERO CONTENT */
 .hero-content {
-  position: relative;
   z-index: 2;
-  height: calc(100vh - 80px);
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
 }
 
 .hero-content h2 {
-  font-size: 56px;
-  margin-bottom: 10px;
+  font-size: 58px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .hero-content p {
-  opacity: 0.8;
-  margin-bottom: 30px;
+  font-size: 18px;
+  opacity: 0.85;
+  margin-bottom: 35px;
 }
 
+/* BUTTONS */
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 button, a {
-  cursor: pointer;
-  text-decoration: none;
+  font-size: 16px;
   color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
+/* PRIMARY BUTTON */
 .btn-primary {
-  padding: 14px 30px;
+  padding: 15px 36px;
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #8a2be2, #5d00ff);
-  box-shadow: 0 0 20px rgba(138,43,226,0.6);
-  transition: 0.3s;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #9b4dff, #6a00ff);
+  box-shadow:
+    0 0 15px rgba(155,77,255,0.6),
+    0 0 40px rgba(106,0,255,0.5);
+  transition: 0.25s;
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
+/* SECONDARY */
 .btn-secondary,
 .btn-outline {
-  padding: 14px 30px;
-  border-radius: 8px;
-  border: 2px solid #8a2be2;
+  padding: 15px 36px;
+  border-radius: 10px;
+  border: 2px solid #9b4dff;
   background: transparent;
+  transition: 0.25s;
 }
 
+.btn-secondary:hover,
+.btn-outline:hover {
+  background: rgba(155,77,255,0.15);
+}
+
+/* COPIED TEXT */
 #copied-text {
-  margin-top: 15px;
+  margin-top: 18px;
   font-size: 14px;
-  color: #a66bff;
+  color: #cfaaff;
   opacity: 0;
   transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
 }
