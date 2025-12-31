@@ -1,165 +1,99 @@
-/* GLOBAL FIX */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+  padding: 120px 60px;
+  background: radial-gradient(circle at top, #1b3a44, #0f2027);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  -webkit-tap-highlight-color: transparent;
-}
-
-body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  min-height: 100vh;
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 60px;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-logo {
-  width: 40px;
-}
-
-.logo-text {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.btn-outline {
-  padding: 10px 22px;
-  border: 1px solid rgba(255,255,255,0.3);
+.about-card {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(10, 25, 32, 0.85);
   border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
-
-.btn-outline:hover {
-  background: white;
-  color: black;
-}
-
-/* HERO CONTENT */
-.hero-content {
-  flex: 1;
+  padding: 70px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
+  justify-content: space-between;
+  gap: 60px;
+  box-shadow: 0 40px 100px rgba(0,0,0,.6);
+  backdrop-filter: blur(10px);
 }
 
-.main-logo {
-  width: 120px;
-  margin-bottom: 20px;
-  animation: float 4s ease-in-out infinite;
+.about-left {
+  flex: 1;
 }
 
-/* LOGO ANIMASYON */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
-}
-
-.hero-content h2 {
-  font-size: 36px;
-  font-weight: 800;
+.about-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #facc15;
   margin-bottom: 15px;
-}
-
-.hero-content p {
-  max-width: 600px;
-  opacity: 0.85;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* SERVER STATUS */
-#server-status {
-  margin-top: 10px;
   font-weight: 600;
 }
 
-/* BUTTONS */
-.buttons {
-  margin-top: 25px;
+.about-left h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.about-desc {
+  color: #cbd5e1;
+  margin-bottom: 40px;
+}
+
+/* FEATURES */
+
+.feature {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.feature-icon {
+  font-size: 22px;
+  color: #38bdf8;
+  margin-top: 4px;
+}
+
+.feature h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.feature p {
+  color: #b6c2cc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= RIGHT LOGO ================= */
+
+.about-right {
+  flex: 1;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.btn-primary {
-  padding: 14px 30px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
+.about-right img {
+  width: 380px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 70px rgba(56,189,248,.6));
+  animation: float 5s ease-in-out infinite;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 40px rgba(0, 114, 255, 0.6);
-}
+/* ================= RESPONSIVE ================= */
 
-.btn-secondary {
-  padding: 14px 30px;
-  border-radius: 30px;
-  background: rgba(255,255,255,0.1);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
+@media (max-width: 900px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
 
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.25);
-}
-
-.toast {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  transform: translateX(120%);
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  padding: 14px 22px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
-  font-weight: 500;
-  z-index: 9999;
-  transition: transform 0.4s ease;
-}
-
-.toast.show {
-  transform: translateX(0);
+  .about-right img {
+    width: 260px;
+  }
 }
