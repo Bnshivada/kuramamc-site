@@ -1,8 +1,15 @@
+/* GLOBAL FIX */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -69,6 +76,14 @@ body {
 .main-logo {
   width: 120px;
   margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* LOGO ANIMASYON */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 }
 
 .hero-content h2 {
@@ -131,20 +146,20 @@ body {
   background: rgba(255,255,255,0.25);
 }
 
-/* TOAST NOTIFICATION */
 .toast {
   position: fixed;
   top: 25px;
-  right: -300px;
+  right: 25px;
+  transform: translateX(120%);
   background: linear-gradient(135deg, #00c6ff, #0072ff);
   padding: 14px 22px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
   font-weight: 500;
   z-index: 9999;
-  transition: right 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .toast.show {
-  right: 25px;
+  transform: translateX(0);
 }
