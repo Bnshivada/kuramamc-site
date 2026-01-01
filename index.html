@@ -1,111 +1,95 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>KuramaMC | Doğrulama</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>KuramaMC | Bakımda</title>
 
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://images.alphacoders.com/123/1235046.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
 
-    .card {
-      background: rgba(20, 20, 20, 0.75);
-      backdrop-filter: blur(10px);
-      padding: 35px 40px;
-      border-radius: 18px;
-      text-align: center;
-      color: #fff;
-      max-width: 420px;
-      width: 90%;
-      box-shadow: 0 0 40px rgba(0,0,0,0.7);
-      animation: fadeIn 0.6s ease;
-    }
+.logo {
+  width: 120px;
+  margin-bottom: 25px;
+  animation: float 4s ease-in-out infinite;
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 
-    .logo {
-      width: 90px;
-      margin-bottom: 15px;
-    }
+p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
 
-    h1 {
-      font-size: 26px;
-      margin: 10px 0;
-      font-weight: 700;
-    }
+.badge {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,114,255,0.4);
+}
 
-    p {
-      font-size: 14px;
-      opacity: 0.85;
-      margin-bottom: 25px;
-    }
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,114,255,0.25), transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: pulse 6s infinite alternate;
+}
 
-    .cf-turnstile {
-      display: flex;
-      justify-content: center;
-    }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
 
-    .footer {
-      margin-top: 18px;
-      font-size: 12px;
-      opacity: 0.6;
-    }
-  </style>
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="card">
-    <img src="assets/logo.png" class="logo" alt="KuramaMC">
+<div class="glow"></div>
 
-    <h1>KuramaMC</h1>
-    <p>Siteye erişmeden önce insan olduğunuzu doğrulayın</p>
+<div class="container">
+  <img src="assets/logo.png" class="logo" alt="KuramaMC">
+  <h1>Şu Anda Bakımdayız</h1>
+  <p>KuramaMC çok yakında sizlerle.<br>Yeni dünyamız hazırlanıyor…</p>
+  <div class="badge">⏳ Geliştirme Aşamasında</div>
+</div>
 
-    <div class="cf-turnstile"
-      data-sitekey="0x4AAAAAACKCsI8fw4fbSXFy"
-      data-callback="verified">
-    </div>
-
-    <div class="footer">
-      Cloudflare Koruması Aktif
-    </div>
-  </div>
-
-<script>
-  function verified() {
-    setTimeout(() => {
-      window.location.href = "ana-sayfa.html";
-    }, 1500);
-  }
-</script>
-  
 </body>
 </html>
