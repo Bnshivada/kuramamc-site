@@ -215,3 +215,17 @@ body {
     gap: 40px;
   }
 }
+
+.no-outline {
+  border: none !important;
+  background-clip: padding-box;
+}
+
+.discord-btn {
+  background: #5865F2 !important;
+  box-shadow: 0 10px 25px rgba(88, 101, 242, 0.5);
+}
+
+.discord-btn:hover {
+  background: #4752C4 !important;
+}
