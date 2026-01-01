@@ -426,3 +426,14 @@ body:has(.shop-center) .shop-center img {
   max-width: 260px;
   width: 80%;
 }
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  flex: 1;
+}
+
