@@ -241,3 +241,26 @@ body {
     width: 180px;
   }
 }
+
+.shop-center{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.shop-btn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(255, 122, 24, 0.5);
+  transition: 0.25s;
+}
+
+.shop-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(255, 122, 24, 0.7);
+}
