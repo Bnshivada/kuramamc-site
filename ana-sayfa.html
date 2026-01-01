@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -5,199 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KuramaMC</title>
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 25px;
-      background: rgba(20,20,20,0.85);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-logo {
-      width: 50px;
-      height: 50px;
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 22px;
-      color: #fff;
-    }
-
-    .nav-menu a {
-      margin-left: 15px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-
-    .nav-menu a:hover {
-      opacity: 0.8;
-    }
-
-    /* Discord button */
-    .btn-discord {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 10px;
-      background: #5865F2;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-
-    .btn-discord:hover {
-      background: #4752c4;
-    }
-
-    .discord-icon {
-      width: 18px;
-      height: 18px;
-    }
-
-    /* Hero section */
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/background.jpg") no-repeat center center;
-      background-size: cover;
-      color: #fff;
-    }
-
-    .hero-content .main-logo {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-
-    .buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary, .btn-secondary {
-      padding: 12px 20px;
-      border-radius: 8px;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: #4cff4c;
-      color: #000;
-    }
-
-    .btn-secondary {
-      background: #151515;
-      color: #fff;
-      border: 1px solid #fff;
-    }
-
-    /* About section */
-    .about-section {
-      padding: 60px 20px;
-      background: #0d0d0d;
-      color: #fff;
-    }
-
-    .about-card {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .about-left {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .about-right img {
-      width: 250px;
-    }
-
-    /* Footer */
-    .footer {
-      background: #151515;
-      color: #fff;
-      padding: 40px 20px;
-    }
-
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    .footer a:hover {
-      opacity: 0.8;
-    }
-
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .footer-grid > div {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .footer-bottom {
-      margin-top: 30px;
-      font-size: 13px;
-      opacity: 0.7;
-    }
-
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #4cff4c;
-      color: #000;
-      padding: 12px 20px;
-      border-radius: 10px;
-      opacity: 0;
-      transition: 0.3s;
-      font-weight: 600;
-      z-index: 9999;
-    }
-
-    .toast.show {
-      opacity: 1;
-    }
-
-  </style>
 </head>
 <body>
 
@@ -206,16 +16,10 @@
     <div class="nav-left">
       <img src="assets/logo.png" class="nav-logo">
       <span class="logo-text">KuramaMC</span>
-
-      <div class="nav-menu">
-        <a href="anasayfa.html">Ana Sayfa</a>
-        <a href="magaza.html">Mağaza</a>
-        <a href="#">SSS</a>
-      </div>
     </div>
 
-    <a href="https://dsc.gg/kuramamc" target="_blank" class="btn-discord">
-      <img src="assets/discord.png" class="discord-icon" alt="Discord">
+    <!-- DISCORD NAVBAR -->
+    <a href="https://dsc.gg/kuramamc" target="_blank" class="btn-outline">
       Discord
     </a>
   </nav>
@@ -238,6 +42,7 @@
         kuramamc.tkmc.net
       </button>
 
+      <!-- TOPLULUK BUTONU -->
       <a href="https://dsc.gg/kuramamc" target="_blank" class="btn-secondary">
         TOPLULUĞA KATIL
       </a>
@@ -245,6 +50,7 @@
   </div>
 </header>
 
+<!-- HAKKIMIZDA -->
 <section class="about-section">
   <div class="about-card">
 
@@ -289,6 +95,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -296,6 +103,7 @@
       <h2>KuramaMC ile kendini yeni dünyalara bırak</h2>
       <p>Gücü eline alacağın eşyalar için mağazaya göz at!</p>
 
+      <!-- FOOTER KATIL -->
       <a href="https://dsc.gg/kuramamc" target="_blank" class="footer-btn">
         Aramıza Katıl
       </a>
@@ -316,28 +124,43 @@
       <div>
         <h4>Hızlı Menü</h4>
         <ul>
-          <li><a href="anasayfa.html">Anasayfa</a></li>
-          <li><a href="magaza.html">Mağaza</a></li>
+          <li><a href="#">Anasayfa</a></li>
+          <li><a href="#">Mağaza</a></li>
           <li><a href="#">Kredi Yükle</a></li>
           <li><a href="#">Destek</a></li>
         </ul>
       </div>
 
-      <div>
-        <h4>Sosyal Medya</h4>
-        <ul>
-          <li>
-            <a href="https://dsc.gg/kuramamc" target="_blank">Discord</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/kuramamc_resmi/" target="_blank">Instagram</a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/@kuramamcresmi" target="_blank">YouTube</a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@kuramamc" target="_blank">TikTok</a>
-          </li>
+     <div>
+  <h4>Sosyal Medya</h4>
+  <ul>
+    <li>
+      <a href="https://dsc.gg/kuramamc" target="_blank">
+        Discord
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.instagram.com/kuramamc_resmi/" target="_blank">
+        Instagram
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.youtube.com/@kuramamcresmi" target="_blank">
+        YouTube
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.tiktok.com/@kuramamc" target="_blank">
+        TikTok
+      </a>
+    </li>
+  </ul>
+</div>
+
+
         </ul>
       </div>
 
