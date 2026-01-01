@@ -404,3 +404,17 @@ body {
 .footer-grid > div {
   min-width: 0;
 }
+
+/* MAGAZA ORTALAMA & BOYUT DÜZELTME */
+
+.shop-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-center img {
+  max-width: 300px;
+  width: 80%;
+  margin-bottom: 30px;
+}
