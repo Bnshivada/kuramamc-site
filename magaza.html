@@ -7,17 +7,23 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: #0f2027;
   color: white;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 /* ORTA ALAN */
 .shop-center {
-  min-height: calc(100vh - 90px);
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,13 +31,12 @@ body {
 }
 
 .shop-center img {
-  max-width: 300px;
+  max-width: 260px;
   width: 80%;
   margin-bottom: 30px;
 }
 
 .shop-btn {
-  display: inline-block;
   padding: 15px 40px;
   border-radius: 30px;
   background: linear-gradient(135deg, #00c6ff, #0072ff);
