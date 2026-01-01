@@ -5,83 +5,19 @@
 <title>KuramaMC Mağaza</title>
 
 <link rel="stylesheet" href="style.css">
-
-<style>
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  background: #0f2027;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-}
-
-/* ORTA ALAN */
-.shop-center {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.shop-center img {
-  max-width: 260px;
-  width: 80%;
-  margin-bottom: 30px;
-}
-
-.shop-btn {
-  padding: 15px 40px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: white;
-  font-weight: 600;
-  font-size: 18px;
-  text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0,114,255,0.4);
-  transition: 0.2s;
-}
-
-.shop-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 40px rgba(0,114,255,0.6);
-}
-</style>
 </head>
 
 <body>
 
-<header class="hero">
-  <nav class="navbar">
-    <div class="nav-left">
-      <img src="assets/logo.png" class="nav-logo">
-      <span class="logo-text">KuramaMC Sunucu Mağazası</span>
-    </div>
-
-    <div style="display:flex; gap:12px; align-items:center;">
-  <a href="ana-sayfa.html" class="btn-outline">Ana Sayfa</a>
-
-  <a href="magaza.html" class="btn-outline">Mağaza</a>
-
-  <a href="https://dsc.gg/kuramamc" target="_blank" class="discord-btn">
-    <img src="assets/discord.png" class="discord-icon">
-    Discord
-  </a>
-</div>
-
-  </nav>
-</header>
+<div id="navbar"></div>
 
 <div class="shop-center">
   <img src="assets/survival.png" alt="Survival">
   <a href="#" class="shop-btn">Göz At</a>
 </div>
 
+<div id="footer"></div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
