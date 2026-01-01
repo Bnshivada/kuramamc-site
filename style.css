@@ -396,3 +396,11 @@ body {
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
+
+.footer-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.footer-grid > div {
+  min-width: 0;
+}
