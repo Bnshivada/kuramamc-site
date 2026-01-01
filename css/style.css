@@ -1,4 +1,3 @@
-/* Global reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +14,13 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Body ana ayarları */
 body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   min-height: 100vh;
-  padding-top: 90px; /* Navbar yüksekliği için */
+  padding-top: 90px;
 }
 
-/* Navbar - fixed üstte */
 .navbar {
   position: fixed;
   top: 0;
@@ -32,7 +29,7 @@ body {
   z-index: 1000;
   background: rgba(15, 32, 39, 0.92);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* Safari için */
+  -webkit-backdrop-filter: blur(8px);
   padding: 18px 50px;
   display: flex;
   justify-content: space-between;
@@ -40,7 +37,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Navbar iç kısımlar */
 .nav-left {
   display: flex;
   align-items: center;
@@ -56,14 +52,13 @@ body {
   font-weight: 700;
 }
 
-/* SAĞ TARAF BUTONLARI İÇİN EKLENMESİ GEREKEN */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* Hero bölümü */
 .hero {
   min-height: calc(100vh - 90px);
   display: flex;
@@ -82,7 +77,6 @@ body {
   padding: 40px 20px;
 }
 
-/* Animasyon ve metinler */
 .main-logo {
   width: 120px;
   margin-bottom: 20px;
@@ -113,7 +107,6 @@ body {
   font-weight: 600;
 }
 
-/* Butonlar */
 .buttons {
   margin-top: 25px;
   display: flex;
@@ -168,7 +161,6 @@ body {
   color: black;
 }
 
-/* About bölümü */
 .about-section {
   padding: 120px 20px;
   display: flex;
@@ -187,7 +179,6 @@ body {
   -webkit-backdrop-filter: blur(15px);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   body {
     padding-top: 80px;
@@ -201,6 +192,10 @@ body {
     padding: 15px 25px;
   }
 
+  .nav-right {
+    gap: 10px;
+  }
+
   .about-card {
     flex-direction: column-reverse;
     text-align: center;
@@ -208,7 +203,6 @@ body {
     gap: 30px;
   }
 
-  /* Feature'lar için (önceki kodunda eksikse) */
   .feature {
     flex-direction: row;
     justify-content: center;
@@ -217,6 +211,6 @@ body {
   }
 
   .about-right img {
-    width: 180px; /* Mobilde küçült */
+    width: 180px;
   }
 }
