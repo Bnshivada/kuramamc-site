@@ -3,6 +3,24 @@ html, body {
   overflow-x: hidden;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 32, 39, 0.9);
+  z-index: 100;
+  padding: 20px 40px;
+
+body {
+  padding-top: 90px;
+}
+
+.hero {
+  padding-top: 0;
+  min-height: calc(100vh - 90px);
+}
+
 * {
   margin: 0;
   padding: 0;
