@@ -46,3 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent("footer", "components/footer.html");
   loadServerStatus();
 });
+
+window.addEventListener("load", () => {
+  document.body.style.minHeight = "100vh";
+});
