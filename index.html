@@ -1,192 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KuramaMC</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>İnsan Doğrulaması</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
-<header class="hero">
-  <nav class="navbar">
-    <div class="nav-left">
-      <img src="assets/logo.png" class="nav-logo">
-      <span class="logo-text">KuramaMC</span>
-    </div>
+<h2>Devam etmek için doğrula</h2>
 
-    <!-- DISCORD NAVBAR -->
-    <a href="https://dsc.gg/kuramamc" target="_blank" class="btn-outline">
-      Discord
-    </a>
-  </nav>
-
-  <div class="hero-content">
-    <img src="assets/logo.png" class="main-logo">
-
-    <h2>MINECRAFTTA YENİ BİR DEVİRE HAZIR MISIN?</h2>
-
-    <p>
-      Türkiye'nin en gelişmiş, adil ve eğlenceli Minecraft sunucusu<br>
-      KuramaMC'ye hoş geldin. Burada kendine yeni arkadaşlıklar bulabilir ve
-      eğlenceni arttırabilirsin.
-    </p>
-
-    <p id="server-status">Sunucu durumu yükleniyor...</p>
-
-    <div class="buttons">
-      <button class="btn-primary ip-button" onclick="copyIP()">
-        kuramamc.tkmc.net
-      </button>
-
-      <!-- TOPLULUK BUTONU -->
-      <a href="https://dsc.gg/kuramamc" target="_blank" class="btn-secondary">
-        TOPLULUĞA KATIL
-      </a>
-    </div>
-  </div>
-</header>
-
-<!-- HAKKIMIZDA -->
-<section class="about-section">
-  <div class="about-card">
-
-    <div class="about-left">
-      <div class="about-title">
-        <span class="icon">⭐</span>
-        <h3>Hakkımızda</h3>
-      </div>
-
-      <h2>Büyük KuramaMC Minecraft Topluluğu</h2>
-      <p class="about-desc">
-        KuramaMC Türkiye'nin Çapraz Platform Oyun Sunucusu
-      </p>
-
-      <div class="feature">
-        <span class="feature-icon">🛡️</span>
-        <div>
-          <h4>Güvenli</h4>
-          <p>
-            Gelişmiş güvenlik önlemlerimiz ve özel yetkili kadromuzla
-            güvenliğinizi öncelik haline getiriyoruz.
-          </p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <span class="feature-icon">&lt;/&gt;</span>
-        <div>
-          <h4>Özel Sistemler</h4>
-          <p>
-            Özel sistemlerimiz ve özel eklentilerimizle büyüleyici bir oyun
-            deneyimi yaşayın.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-right">
-      <img src="assets/logo.png" alt="KuramaMC Logo">
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-top">
-      <h2>KuramaMC ile kendini yeni dünyalara bırak</h2>
-      <p>Gücü eline alacağın eşyalar için mağazaya göz at!</p>
-
-      <!-- FOOTER KATIL -->
-      <a href="https://dsc.gg/kuramamc" target="_blank" class="footer-btn">
-        Aramıza Katıl
-      </a>
-    </div>
-
-    <div class="footer-grid">
-      <div>
-        <h4>Hakkımızda</h4>
-        <p>KuramaMC - En iyi Survival ve özel sistemler deneyimi!</p>
-        <p class="footer-mail">
-          İletişim:
-          <a href="mailto:kuramamcresmi@gmail.com">
-            kuramamcresmi@gmail.com
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <h4>Hızlı Menü</h4>
-        <ul>
-          <li><a href="#">Anasayfa</a></li>
-          <li><a href="#">Mağaza</a></li>
-          <li><a href="#">Kredi Yükle</a></li>
-          <li><a href="#">Destek</a></li>
-        </ul>
-      </div>
-
-     <div>
-  <h4>Sosyal Medya</h4>
-  <ul>
-    <li>
-      <a href="https://dsc.gg/kuramamc" target="_blank">
-        Discord
-      </a>
-    </li>
-
-    <li>
-      <a href="https://www.instagram.com/kuramamc_resmi/" target="_blank">
-        Instagram
-      </a>
-    </li>
-
-    <li>
-      <a href="https://www.youtube.com/@kuramamcresmi" target="_blank">
-        YouTube
-      </a>
-    </li>
-
-    <li>
-      <a href="https://www.tiktok.com/@kuramamc" target="_blank">
-        TikTok
-      </a>
-    </li>
-  </ul>
+<div class="cf-turnstile"
+     data-sitekey="0x4AAAAAACKCsI8fw4fbSXFy"
+     data-callback="verified">
 </div>
 
+<script>
+  function verified() {
+    window.location.href = "site.html";
+  }
+</script>
 
-        </ul>
-      </div>
-
-      <div>
-        <h4>Sözleşmeler</h4>
-        <ul>
-          <li><a href="#">Hizmet Politikası</a></li>
-          <li><a href="#">Gizlilik Politikası</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>
-        KuramaMC, Mojang veya Minecraft ile bağlantılı değildir.<br>
-        KuramaMC © 2026 — Tüm hakları saklıdır.
-      </p>
-      <span>Powered by <strong>KuramaMC Team</strong></span>
-    </div>
-
-  </div>
-</footer>
-
-<div id="toast" class="toast">
-  Sunucu IP Adresi Başarıyla Kopyalandı
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
