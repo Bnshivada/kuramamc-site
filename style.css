@@ -1,6 +1,4 @@
-/* ========================= */
 /* GLOBAL FIX */
-/* ========================= */
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -14,25 +12,20 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ANA SAYFA BODY */
 body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   min-height: 100vh;
 }
 
-/* ========================= */
 /* HERO */
-/* ========================= */
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ========================= */
 /* NAVBAR */
-/* ========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -55,37 +48,21 @@ body {
   font-weight: 700;
 }
 
-/* Discord Button */
-.discord-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.btn-outline {
   padding: 10px 22px;
-  border-radius: 999px;
-  background: #5865F2;
-  color: white;
-  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
   text-decoration: none;
-  transition: 0.3s ease;
-  box-shadow: 0 8px 25px rgba(88,101,242,0.35);
+  color: white;
+  transition: 0.3s;
 }
 
-.discord-btn:hover {
-  background: #4752C4;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(88,101,242,0.5);
+.btn-outline:hover {
+  background: white;
+  color: black;
 }
 
-.discord-icon {
-  height: 18px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-/* ========================= */
 /* HERO CONTENT */
-/* ========================= */
 .hero-content {
   flex: 1;
   display: flex;
@@ -102,6 +79,7 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* LOGO FLOAT */
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
@@ -121,14 +99,13 @@ body {
   margin-bottom: 15px;
 }
 
+/* SERVER STATUS */
 #server-status {
   margin-top: 10px;
   font-weight: 600;
 }
 
-/* ========================= */
 /* BUTTONS */
-/* ========================= */
 .buttons {
   margin-top: 25px;
   display: flex;
@@ -169,9 +146,29 @@ body {
   background: rgba(255,255,255,0.25);
 }
 
+/* TOAST */
+.toast {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  transform: translateX(120%);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
+  font-weight: 500;
+  z-index: 9999;
+  transition: transform 0.4s ease;
+}
+
+.toast.show {
+  transform: translateX(0);
+}
+
 /* ========================= */
-/* ABOUT */
+/* ABOUT / HAKKIMIZDA */
 /* ========================= */
+
 .about-section {
   padding: 120px 20px;
   display: flex;
@@ -189,49 +186,213 @@ body {
   backdrop-filter: blur(15px);
 }
 
-/* ========================= */
+/* LEFT */
+.about-left {
+  flex: 1;
+}
+
+.about-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,114,255,0.15);
+  padding: 10px 18px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.about-title .icon {
+  color: #4fc3ff;
+  font-size: 18px;
+}
+
+.about-left h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.about-desc {
+  opacity: 0.8;
+  margin-bottom: 35px;
+}
+
+/* FEATURES */
+.feature {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.feature-icon {
+  font-size: 26px;
+  color: #4fc3ff;
+}
+
+.feature h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* RIGHT */
+.about-right {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-right img {
+  width: 260px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .about-card {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .feature {
+    justify-content: center;
+    text-align: left;
+  }
+}
 /* FOOTER */
-/* ========================= */
 .footer {
   background: #050505;
   padding: 80px 20px 30px;
   color: #ccc;
 }
 
-/* ========================= */
-/* MAĞAZA SAYFASI */
-/* ========================= */
-
-.shop-page {
-  background: radial-gradient(circle at top, #111827, #020617);
-  min-height: 100vh;
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.shop {
-  padding: 80px 10%;
+.footer-top {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.shop-grid {
+.footer-top h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-top p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.footer-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
 }
 
-.product-card {
-  background: linear-gradient(180deg, #0f172a, #020617);
-  border: 1px solid #1e293b;
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.45);
-  transition: .3s ease;
+.footer h4 {
+  color: white;
+  margin-bottom: 15px;
 }
 
-.product-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 35px 70px rgba(0,0,0,.65);
+.footer-mail a {
+  color: #4fc3ff;
+  text-decoration: none;
 }
 
-.product-card span {
-  color: #f59e0b;
-  font-weight: 700;
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #4fc3ff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.discord-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #5865F2;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(88,101,242,0.35);
+}
+
+.discord-btn:hover {
+  background: #4752C4;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(88,101,242,0.5);
+}
+
+.discord-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.discord-icon {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
