@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KuramaMC</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div id="navbar"></div>
-  
-  <div class="hero-content">
-    <img src="assets/logo.png" class="main-logo">
 
-    <h2>MINECRAFTTA YENİ BİR DEVİRE HAZIR MISIN?</h2>
 
-    <p>
-      Türkiye'nin en gelişmiş, adil ve eğlenceli Minecraft sunucusu<br>
-      KuramaMC'ye hoş geldin. Burada kendine yeni arkadaşlıklar bulabilir ve
-      eğlenceni arttırabilirsin.
-    </p>
-
-    <p id="server-status">Sunucu durumu yükleniyor...</p>
-
-    <div class="buttons">
-      <button class="btn-primary ip-button" onclick="copyIP()">kuramamc.tkmc.net</button>
-      <a href="https://dsc.gg/kuramamc" target="_blank" class="btn-secondary">TOPLULUĞA KATIL</a>
+  <div class="hero">
+    <div class="hero-content">
+      <img src="assets/logo.png" class="main-logo" alt="KuramaMC Logo" />
+      <h2>MINECRAFTTA YENİ BİR DEVİRE HAZIR MISIN?</h2>
+      <p>
+        Türkiye'nin en gelişmiş, adil ve eğlenceli Minecraft sunucusu<br />
+        KuramaMC'ye hoş geldin. Burada kendine yeni arkadaşlıklar bulabilir ve
+        eğlenceni arttırabilirsin.
+      </p>
+      <p id="server-status">Sunucu durumu yükleniyor...</p>
+      <div class="buttons">
+        <button class="btn-primary ip-button" onclick="copyIP()">
+          kuramamc.tkmc.net
+        </button>
+        <a
+          href="https://dsc.gg/kuramamc"
+          target="_blank"
+          class="btn-secondary"
+        >
+          TOPLULUĞA KATIL
+        </a>
+      </div>
     </div>
   </div>
 
-</header>
+  <section class="about-section">
+    <div class="about-card">
+      <div class="about-left">
+        <div class="about-title">
+          <span class="icon">⭐</span>
+          <h3>Hakkımızda</h3>
+        </div>
+        <h2>Büyük KuramaMC Minecraft Topluluğu</h2>
+        <p class="about-desc">
+          KuramaMC Türkiye'nin Çapraz Platform Oyun Sunucusu
+        </p>
 
-<section class="about-section">
-  <div class="about-card">
-    <div class="about-left">
+        <div class="feature">
+          <span class="feature-icon">🛡️</span>
+          <div>
+            <h4>Güvenli</h4>
+            <p>Gelişmiş güvenlik önlemlerimizle güvenliğinizi koruyoruz.</p>
+          </div>
+        </div>
 
-      <div class="about-title">
-        <span class="icon">⭐</span>
-        <h3>Hakkımızda</h3>
-      </div>
-
-      <h2>Büyük KuramaMC Minecraft Topluluğu</h2>
-      <p class="about-desc">KuramaMC Türkiye'nin Çapraz Platform Oyun Sunucusu</p>
-
-      <div class="feature">
-        <span class="feature-icon">🛡️</span>
-        <div>
-          <h4>Güvenli</h4>
-          <p>Gelişmiş güvenlik önlemlerimizle güvenliğinizi koruyoruz.</p>
+        <div class="feature">
+          <span class="feature-icon"></span>
+          <div>
+            <h4>Özel Sistemler</h4>
+            <p>Özel eklentilerle eşsiz bir oyun deneyimi.</p>
+          </div>
         </div>
       </div>
 
-      <div class="feature">
-        <span class="feature-icon">&lt;/&gt;</span>
-        <div>
-          <h4>Özel Sistemler</h4>
-          <p>Özel eklentilerle eşsiz bir oyun deneyimi.</p>
-        </div>
+      <div class="about-right">
+        <img src="assets/logo.png" alt="KuramaMC Logo" />
       </div>
-
     </div>
+  </section>
 
-    <div class="about-right">
-      <img src="assets/logo.png">
-    </div>
-  </div>
-</section>
+  <div id="footer"></div>
 
-<div id="footer"></div>
-</div>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
