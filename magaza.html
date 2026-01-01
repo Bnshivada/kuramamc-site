@@ -3,76 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <title>KuramaMC Mağaza</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #0f2027;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-  }
 
-  <header class="hero">
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f2027;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ORTA ALAN */
+.shop-center {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-center img {
+  max-width: 300px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,114,255,0.4);
+  transition: 0.2s;
+}
+
+.shop-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0,114,255,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
   <nav class="navbar">
     <div class="nav-left">
       <img src="assets/logo.png" class="nav-logo">
-      <span class="logo-text">KuramaMC</span>
+      <span class="logo-text">KuramaMC Sunucu Mağazası</span>
     </div>
 
-    <!-- DISCORD + MAGAZA NAVBAR -->
-<div style="display:flex; gap:12px; align-items:center;">
+    <div style="display:flex; gap:12px; align-items:center;">
+      <a href="magaza.html" class="btn-outline">Mağaza</a>
 
-  <a href="magaza.html" class="btn-outline">
-    Mağaza
-  </a>
+      <a href="https://dsc.gg/kuramamc" target="_blank" class="discord-btn">
+        <img src="assets/discord.png" class="discord-icon">
+        Discord
+      </a>
+    </div>
+  </nav>
+</header>
 
-  <a href="https://dsc.gg/kuramamc" target="_blank" class="discord-btn">
-    <img src="assets/discord.png" class="discord-icon">
-    Discord
-  </a>
-
+<div class="shop-center">
+  <img src="assets/survival.png" alt="Survival">
+  <a href="#" class="shop-btn">Göz At</a>
 </div>
-
-
-  .shop-center {
-    text-align: center;
-  }
-
-  .shop-center img {
-    max-width: 300px;
-    width: 80%;
-    margin-bottom: 30px;
-  }
-
-  .shop-btn {
-    display: inline-block;
-    padding: 15px 40px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0,114,255,0.4);
-    transition: 0.2s;
-  }
-
-  .shop-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(0,114,255,0.6);
-  }
-</style>
-</head>
-<body>
-
-  <div class="shop-center">
-    <img src="assets/survival.png" alt="Survival">
-    <a href="#" class="shop-btn">Göz At</a>
-  </div>
 
 </body>
 </html>
