@@ -1,4 +1,3 @@
-console.log("Her şey düzgün çalışıyor ✔");
 async function loadComponent(id, file) {
   const res = await fetch(file);
   const html = await res.text();
@@ -7,3 +6,4 @@ async function loadComponent(id, file) {
 
 loadComponent("navbar", "components/navbar.html");
 loadComponent("footer", "components/footer.html");
+console.log("KuramaMC yüklendi 🐺");
