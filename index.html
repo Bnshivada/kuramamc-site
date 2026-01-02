@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>KuramaMC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>KuramaMC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- COMPONENTS -->
-  <div id="navbar"></div>
+<header class="navbar">
+  <div class="logo">
+    <img src="assets/img/logo.png">
+    <span>KuramaMC</span>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Yeni Nesil Minecraft Deneyimi</h1>
-      <p>KuramaMC dünyasına hoş geldin.</p>
+  <nav class="menu">
+    <a class="active" href="#">Ana Sayfa</a>
+    <a href="#">Mağaza</a>
+    <a href="#">Destek</a>
+    <a href="#">Discord</a>
+  </nav>
 
-      <div class="hero-buttons">
-        <a class="btn primary">Sunucuya Katıl</a>
-        <a class="btn secondary">Discord</a>
+  <button class="login-btn">Kayıt Ol</button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <img class="main-logo" src="assets/img/logo.png">
+    <h1>KuramaMC</h1>
+    <p>Yeni Nesil Minecraft Deneyimi</p>
+
+    <div class="server-box">
+      <div class="server-ip">
+        <strong>oyna.kuramamc.com</strong>
+        <span>Sunucu IP</span>
+      </div>
+
+      <div class="discord-box">
+        <strong>Discord</strong>
+        <span>Topluluğumuza Katıl</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURES -->
-  <section class="features">
-    <h2>Neden KuramaMC?</h2>
-    <div class="cards">
-      <div class="card">🚀 Performans</div>
-      <div class="card">🛡️ Güvenlik</div>
-      <div class="card">🎮 Eğlence</div>
-    </div>
-  </section>
-
-  <div id="footer"></div>
-
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
