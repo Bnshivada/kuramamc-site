@@ -2,28 +2,41 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>My Website</title>
+  <title>KuramaMC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">LOGO</div>
+  <!-- COMPONENTS -->
+  <div id="navbar"></div>
 
-    <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Yeni Nesil Minecraft Deneyimi</h1>
+      <p>KuramaMC dünyasına hoş geldin.</p>
 
-  <main class="container">
-    <h1>Site Çalışıyor 🎉</h1>
-    <p>Bu artık sağlam bir temel.</p>
-  </main>
+      <div class="hero-buttons">
+        <a class="btn primary">Sunucuya Katıl</a>
+        <a class="btn secondary">Discord</a>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/main.js" defer></script>
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>Neden KuramaMC?</h2>
+    <div class="cards">
+      <div class="card">🚀 Performans</div>
+      <div class="card">🛡️ Güvenlik</div>
+      <div class="card">🎮 Eğlence</div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
