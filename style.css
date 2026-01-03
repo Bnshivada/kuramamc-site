@@ -168,35 +168,11 @@ body {
   transform: translateX(0);
 }
 
-.banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner-logo {
-  position: absolute;
-  bottom: -45px;
-
-  width: 110px;
-  height: 110px;
-
-  background: #fff;
-  border-radius: 50%;
-  padding: 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 12px 30px rgba(0,0,0,.25);
-}
-
 .banner-logo img {
-  width: 100%;
-  height: 100%;
+  width: 70% !important;
+  height: 70% !important;
   object-fit: contain;
   display: block;
 }
+
 
