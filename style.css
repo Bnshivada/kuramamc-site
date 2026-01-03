@@ -168,11 +168,67 @@ body {
   transform: translateX(0);
 }
 
-.banner-logo img {
-  width: 70% !important;
-  height: 70% !important;
-  object-fit: contain;
-  display: block;
+/* Top banner'ı daha düzgün hale getir */
+.top-banner {
+  position: relative;
+  height: 140px;               /* banner yüksekliğini biraz artırdık, kurt başı için ideal */
+  background: linear-gradient(135deg, #0e1a2b, #1b2a4e);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  overflow: hidden;
 }
 
+/* Logo container'ı */
+.banner-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;                /* logo genişliği - isteğe göre 280-380 arası değiştir */
+  height: 100%;
+  pointer-events: none;        /* tıklanabilir olmasın */
+}
+
+/* Logo resmi */
+.banner-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  filter: drop-shadow(0 10px 30px rgba(0, 198, 255, 0.4)); /* ekstra havalı gölge */
+}
+
+/* Sol ve sağ metinleri öne çıkar */
+.banner-left,
+.banner-right {
+  z-index: 2;                  /* logo arkasında kalsın */
+  background: rgba(10, 15, 31, 0.6);
+  padding: 10px 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+
+/* Mobil için */
+@media (max-width: 768px) {
+  .top-banner {
+    height: 120px;
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .banner-logo {
+    width: 220px;
+    position: relative;
+    transform: none;
+    margin: 0 auto;
+  }
+  
+  .banner-left, .banner-right {
+    width: 90%;
+    text-align: center;
+  }
+}
 
