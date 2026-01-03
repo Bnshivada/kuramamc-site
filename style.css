@@ -175,3 +175,33 @@ body {
 .toast.show {
   transform: translateX(0);
 }
+
+/* DISCORD BUTTON */
+.discord-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 20px;
+  border-radius: 30px;
+
+  background: #1e1f22; /* Discord koyu tema */
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+
+  transition: 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.discord-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.discord-btn:hover {
+  background: #2b2d31;
+  transform: translateY(-1px);
+}
