@@ -176,7 +176,6 @@ body {
   transform: translateX(0);
 }
 
-/* DISCORD BUTTON */
 .discord-btn {
   display: flex;
   align-items: center;
@@ -185,15 +184,13 @@ body {
   padding: 10px 20px;
   border-radius: 30px;
 
-  background: #1e1f22; /* Discord koyu tema */
-  color: #ffffff;
-
+  background: #5865F2;
+  color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 15px;
 
   transition: 0.25s ease;
-  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.45);
 }
 
 .discord-btn img {
@@ -202,6 +199,7 @@ body {
 }
 
 .discord-btn:hover {
-  background: #2b2d31;
-  transform: translateY(-1px);
+  background: #4752C4;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(88, 101, 242, 0.6);
 }
