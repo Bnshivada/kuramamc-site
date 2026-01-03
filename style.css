@@ -196,4 +196,5 @@ body {
   height: 20px;
   object-fit: contain;     
   flex-shrink: 0;
+  filter: brightness(0) invert(1);
 }
