@@ -1,51 +1,93 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>KuramaMC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KuramaMC</title>
 
-<link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">
-    <img src="assets/img/logo.png" alt="KuramaMC Logo">
-    <span>KuramaMC</span>
-  </div>
-
-  <nav class="menu">
-    <a class="active" href="#">Ana Sayfa</a>
-    <a href="#">Mağaza</a>
-    <a href="#">Destek</a>
-    <a href="#">Discord</a>
+<header class="hero">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" class="nav-logo">
+      <span class="logo-text">KuramaMC</span>
+    </div>
+    <a href="#" class="btn-outline">Discord</a>
   </nav>
 
-  <button class="login-btn">Kayıt Ol</button>
+  <div class="hero-content">
+    <img src="assets/logo.png" class="main-logo">
+
+    <h2>MINECRAFTTA YENİ BİR DEVİRE HAZIR MISIN?</h2>
+
+    <p>
+      Türkiye'nin en gelişmiş, adil ve eğlenceli Minecraft sunucusu<br>
+      KuramaMC'ye hoş geldin.
+    </p>
+
+    <p id="server-status">Sunucu durumu yükleniyor...</p>
+
+    <div class="buttons">
+      <button class="btn-primary" onclick="copyIP()">kuramamc.tkmc.net</button>
+      <a href="#" class="btn-secondary">TOPLULUĞA KATIL</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <img class="main-logo" src="assets/img/logo.png" alt="KuramaMC">
-
-    <h1>SINIRLARI AŞMAYA HAZIR MISIN?</h1>
-    <p>Yeni nesil Minecraft deneyimi şimdi KuramaMC'de başlıyor.</p>
-
-    <div class="server-box">
-      <div class="server-ip">
-        <strong>oyna.kuramamc.com</strong>
-        <span>Sunucu IP</span>
+<section class="about-section">
+  <div class="about-card">
+    <div class="about-left">
+      <div class="about-title">
+        <span class="icon">⭐</span>
+        <h3>Hakkımızda</h3>
       </div>
 
-      <div class="discord-box">
-        <strong>Discord</strong>
-        <span>Topluluğumuza Katıl</span>
+      <h2>Büyük KuramaMC Minecraft Topluluğu</h2>
+      <p class="about-desc">
+        KuramaMC Türkiye'nin Çapraz Platform Oyun Sunucusu
+      </p>
+
+      <div class="feature">
+        <span class="feature-icon">🛡️</span>
+        <div>
+          <h4>Güvenli</h4>
+          <p>
+            Gelişmiş güvenlik önlemleri ve yetkili kadromuzla
+            güvenliğinizi öncelik haline getiriyoruz.
+          </p>
+        </div>
       </div>
+
+      <div class="feature">
+        <span class="feature-icon">&lt;/&gt;</span>
+        <div>
+          <h4>Özel Sistemler</h4>
+          <p>
+            Özel eklentilerimizle benzersiz bir oyun deneyimi yaşayın.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right">
+      <img src="assets/logo.png">
     </div>
   </div>
 </section>
 
-<script src="js/main.js"></script>
+<footer class="footer">
+  <div class="footer-inner">
+    <p>KuramaMC © 2026 — Tüm hakları saklıdır.</p>
+    <p>Minecraft veya Mojang ile bağlantılı değildir.</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast">IP Kopyalandı</div>
+
+<script src="script.js"></script>
 </body>
 </html>
