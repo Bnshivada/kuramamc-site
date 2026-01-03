@@ -175,26 +175,15 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   padding: 10px 22px;
   border-radius: 999px;
-
-  background: #5865F2; 
+  background: #5865F2;
   color: white;
   text-decoration: none;
   font-weight: 600;
-
-  height: 44px;  
+  height: 44px;
   box-sizing: border-box;
-
   transition: 0.25s;
-}
-
-.discord-btn img {
-  width: 20px;
-  height: 20px;
-
-  filter: brightness(0) invert(1);
 }
 
 .discord-btn:hover {
@@ -202,8 +191,8 @@ body {
 }
 
 .discord-icon {
-  width: 20px; 
-  height: 20px;
-  display: block;  
-  object-fit: contain;
+  width: 24px;           /* biraz daha büyük = daha net durur */
+  height: 24px;
+  object-fit: contain;   /* ← BU KRİTİK! Oranı korur, yayılmayı önler */
+  flex-shrink: 0;
 }
