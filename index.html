@@ -1,200 +1,104 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minecraft Sunucu Sitesi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0b0e13;
-      color: #fff;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    /* NAVBAR */
-    header {
-      background: #11151d;
-      padding: 16px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1f2430;
-    }
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      color: #4caf50;
-    }
-    nav a {
-      margin-left: 24px;
-      font-weight: 500;
-      opacity: 0.85;
-    }
-    nav a:hover { opacity: 1; }
-
-    /* HERO */
-    .hero {
-      padding: 80px 40px;
-      background: linear-gradient(180deg, #0b0e13, #0f1420);
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-    .hero p {
-      font-size: 18px;
-      opacity: 0.8;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* STATS */
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
-    }
-    .stat {
-      background: #121826;
-      padding: 20px 30px;
-      border-radius: 10px;
-      min-width: 160px;
-    }
-    .stat h2 {
-      margin: 0;
-      color: #4caf50;
-    }
-    .stat span { opacity: 0.7; }
-
-    /* STORE */
-    .store {
-      padding: 60px 40px;
-    }
-    .store h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 32px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .card {
-      background: #121826;
-      border-radius: 12px;
-      padding: 20px;
-      transition: 0.3s;
-      border: 1px solid #1f2430;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #4caf50;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    .card h3 { margin: 0 0 8px; }
-    .card p { opacity: 0.7; font-size: 14px; }
-    .price {
-      margin-top: 12px;
-      font-weight: 700;
-      color: #4caf50;
-    }
-    .btn {
-      display: block;
-      text-align: center;
-      margin-top: 16px;
-      padding: 10px;
-      background: #4caf50;
-      color: #000;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #11151d;
-      padding: 20px;
-      text-align: center;
-      opacity: 0.6;
-      font-size: 14px;
-      margin-top: 60px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Haberler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <div class="logo">MC Server</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Store</a>
-    <a href="#">Forum</a>
-    <a href="#">Support</a>
+<!-- ÜST BANNER -->
+<div class="top-banner">
+  <div class="banner-left">
+    🎮 <strong>36213</strong> OYUNCU AKTİF<br>
+    <span>play.example.net</span>
+  </div>
+
+  <div class="banner-logo">O</div>
+
+  <div class="banner-right">
+    💬 <strong>872</strong> ÜYE ÇEVRİMİÇİ<br>
+    <span>Discord Topluluğu</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <nav class="nav-left">
+    <a class="active">Anasayfa</a>
+    <a>Mağaza</a>
+    <a>Forum</a>
+    <a>Yardım</a>
+    <a>Destek</a>
   </nav>
+
+  <div class="nav-right">
+    <a class="login">Giriş Yap</a>
+    <a class="register">Kayıt Ol</a>
+  </div>
 </header>
 
-<section class="hero">
-  <h1>Minecraft Sunucumuza Hoş Geldin</h1>
-  <p>En iyi PvP ve Survival deneyimi. Hemen katıl ve eğlenceye başla!</p>
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  Anasayfa / Haber
+</div>
 
-  <div class="stats">
-    <div class="stat">
-      <h2>128</h2>
-      <span>Online Oyuncu</span>
-    </div>
-    <div class="stat">
-      <h2>1.20</h2>
-      <span>Versiyon</span>
-    </div>
-    <div class="stat">
-      <h2>24/7</h2>
-      <span>Aktif</span>
-    </div>
-  </div>
-</section>
+<!-- ANA İÇERİK -->
+<main class="container">
 
-<section class="store">
-  <h2>Mağaza</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x180" />
-      <h3>VIP</h3>
-      <p>Özel komutlar ve avantajlar</p>
-      <div class="price">₺99</div>
-      <a class="btn" href="#">Satın Al</a>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x180" />
-      <h3>MVIP</h3>
-      <p>Daha fazla güç ve özellik</p>
-      <div class="price">₺199</div>
-      <a class="btn" href="#">Satın Al</a>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x180" />
-      <h3>Ultra</h3>
-      <p>Tüm özelliklerin kilidi açılır</p>
-      <div class="price">₺299</div>
-      <a class="btn" href="#">Satın Al</a>
-    </div>
-  </div>
-</section>
+  <!-- SOL: HABERLER -->
+  <section class="content">
+    <h2>Haber</h2>
 
-<footer>
-  © 2026 MC Server – Tüm Hakları Saklıdır
-</footer>
+    <article class="news-card">
+      <img src="https://via.placeholder.com/420x240">
+      <div class="news-body">
+        <span class="news-meta">Updates · 18 Haz 2025 15:15</span>
+        <h3>What is Lorem Ipsum?</h3>
+        <p>
+          The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit...
+        </p>
+        <button>Devamını Oku</button>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://via.placeholder.com/420x240">
+      <div class="news-body">
+        <span class="news-meta">Updates · 18 Haz 2025 15:13</span>
+        <h3>What is Lorem Ipsum?</h3>
+        <p>
+          The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit...
+        </p>
+        <button>Devamını Oku</button>
+      </div>
+    </article>
+  </section>
+
+  <!-- SAĞ: DISCORD -->
+  <aside class="sidebar">
+    <div class="discord-card">
+      <div class="discord-header">
+        Discord
+        <span>872 Members Online</span>
+      </div>
+      <ul class="discord-users">
+        <li>cookie</li>
+        <li>Bywestaken</li>
+        <li>KroFEX</li>
+        <li>Lixmage</li>
+        <li>By Alpha</li>
+        <li>Eren</li>
+        <li>Arda</li>
+      </ul>
+    </div>
+  </aside>
+
+</main>
 
 </body>
 </html>
