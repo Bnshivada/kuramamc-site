@@ -5,82 +5,139 @@
 <title>Burada Sona Erdi</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-    body {
-        background: radial-gradient(circle at top, #0b1d3a, #050b1a);
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        color: white;
-    }
+body {
+    background: radial-gradient(circle at top, #0b1d3a, #050b1a);
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .container {
-        text-align: center;
-    }
+/* Yazı */
+.container {
+    text-align: center;
+    z-index: 2;
+}
 
-    .word {
-        display: inline-block;
-        font-size: 64px;
-        font-weight: 800;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #ffffff;
-        text-shadow: 
-            0 0 10px rgba(0, 200, 255, 0.6),
-            0 0 30px rgba(0, 200, 255, 0.4);
-        opacity: 0;
-        transform: translateY(-120px);
-        animation: slideDown 1s ease-out forwards;
-    }
+.word {
+    display: inline-block;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px rgba(0, 200, 255, 0.6),
+        0 0 30px rgba(0, 200, 255, 0.4);
+    opacity: 0;
+    transform: translateY(-120px);
+    animation: slideDown 1s ease-out forwards;
+}
 
-    .word:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-    .word:nth-child(2) {
-        animation-delay: 0.6s;
-    }
-    .word:nth-child(3) {
-        animation-delay: 1s;
-    }
+.word:nth-child(1) { animation-delay: 0.2s; }
+.word:nth-child(2) { animation-delay: 0.6s; }
+.word:nth-child(3) { animation-delay: 1s; }
 
-    @keyframes slideDown {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .line {
-        margin-top: 10px;
-        height: 4px;
-        width: 0;
-        background: linear-gradient(90deg, transparent, #00c8ff, transparent);
-        border-radius: 10px;
-        animation: lineGrow 1.2s ease-out forwards;
-        animation-delay: 1.4s;
-    }
+/* Karakter (robot) */
+.robot {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background: #00c8ff;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s linear;
+    z-index: 1;
+}
 
-    @keyframes lineGrow {
-        to {
-            width: 100%;
-        }
-    }
+.robot::before,
+.robot::after {
+    content: "";
+    position: absolute;
+    background: #0b1d3a;
+    border-radius: 50%;
+}
+
+.robot::before {
+    width: 10px;
+    height: 10px;
+    left: 16px;
+}
+
+.robot::after {
+    width: 10px;
+    height: 10px;
+    right: 16px;
+}
+
+.mouth {
+    position: absolute;
+    bottom: 16px;
+    width: 24px;
+    height: 4px;
+    background: #0b1d3a;
+    border-radius: 4px;
+}
 </style>
 </head>
 <body>
-    <div class="container">
-        <span class="word">Burada</span>
-        <span class="word">Sona</span>
-        <span class="word">Erdi.</span>
-        <div class="line"></div>
-    </div>
+
+<div class="container">
+    <span class="word">Burada</span>
+    <span class="word">Sona</span>
+    <span class="word">Erdi.</span>
+</div>
+
+<div class="robot">
+    <div class="mouth"></div>
+</div>
+
+<script>
+const robot = document.querySelector(".robot");
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let robotX = mouseX;
+let robotY = mouseY;
+
+// Mouse pozisyonu
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Yumuşak takip (smooth follow)
+function animate() {
+    robotX += (mouseX - robotX) * 0.08;
+    robotY += (mouseY - robotY) * 0.08;
+
+    robot.style.left = robotX - 30 + "px";
+    robot.style.top = robotY - 30 + "px";
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
 </body>
 </html>
